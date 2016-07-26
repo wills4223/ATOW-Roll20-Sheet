@@ -1,0 +1,794 @@
+<html><!--Version .34--><head> 
+  <link rel="stylesheet" href="ATOWsheet.css"> 
+ </head> 
+<body>
+    <div class="sheet-row">
+        <label>Name:</label>
+        <input type="text" style="width: 160px;" name="attr_char_name">
+        <label>Era:</label>
+        <input type="text" style="width: 160px;" name="attr_era">
+        <label>Player:</label>
+        <input type="text" style="width: 160px;" name="attr_playername">
+    </div>
+    <br>
+    <br>
+    <table cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td colspan="3" class="sheet-statlabel-big" style="font-size: 1.2em; width: 180px;">Affiliation</td>
+                <td class="sheet-statlabel" style="width: 60px;">Height CM</td>
+                <td class="sheet-statlabel" style="width: 60px;">Weight KG</td>
+                <td class="sheet-statlabel" style="width: 60px;">Hair</td>
+                <td class="sheet-statlabel" style="width: 60px;">Eyes</td>
+                <td class="sheet-statlabel" style="width: 80px;">Extra</td>
+            </tr>
+            <tr>
+                <td colspan="3"><input class="sheet-inputbox" type="text" name="attr_Affiliation" style="height: 24px; width: 180px;"></td>
+                <td><input class="sheet-inputbox" type="number" name="attr_height" style="height: 24px; width: 60px;"></td>
+                <td><input class="sheet-inputbox" type="number" name="attr_weight" style="height: 24px; width: 60px;"></td>
+                <td><input class="sheet-inputbox" type="text" name="attr_hair" style="height: 24px; width: 80px;"></td>
+                <td><input class="sheet-inputbox" type="text" name="attr_eyes" style="height: 24px; width: 80px;"></td>
+                <td><input class="sheet-inputbox" type="text" name="attr_extra" style="height: 24px; width: 220px;"></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Attributes -->
+    <div class="sheet-2colrow">
+        <div class="sheet-col">
+            <table>
+                <tbody>
+                    <tr>
+                        <th> </th>
+                        <th class="sheet-heading sheet-med"> <label>Score</label> </th>
+                        <th class="sheet-heading sheet-med"> <label>Link</label> </th>
+                        <th class="sheet-heading sheet-small"> <label>Xp</label> </th>
+                    </tr>
+                    <tr>
+                        <th class="sheet-item sheet-med"> <label>Strength:</label> </th>
+                        <td class="sheet-item sheet-med"> <input type="number" name="attr_str"> </td>
+                        <td class="sheet-item sheet-med"> <input type="number" name="attr_strlink"> </td>
+                        <td class="sheet-item sheet-med"> <input type="number" name="attr_strxp"> </td>
+                    </tr>
+                    <tr>
+                        <th class="sheet-item sheet-med"> <label>Body:</label> </th>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_bod"> </td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_bodlink"> </td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_bodxp"> </td>
+                    </tr>
+                    <tr>
+                        <th class="sheet-item sheet-large"> <label>Reflex:</label> </th>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_rfl"> </td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_rfllink"> </td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_rflxp"> </td>
+                    </tr>
+                    <tr>
+                        <th class="sheet-item sheet-large"> <label>Dexterity:</label> </th>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_dex"></td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_dexlink"></td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_dexxp"></td>
+                    </tr>
+                    <tr>
+                        <th class="sheet-item sheet-large"> <label>Intelligence:</label> </th>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_int"></td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_intlink"> </td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_intxp"></td>
+                    </tr>
+                    <tr>
+                        <th class="sheet-item sheet-large"> <label>Willpower:</label> </th>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_will"></td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_willlink"></td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_willxp"></td>
+                    </tr>
+                    <tr>
+                        <th class="sheet-item sheet-large"> <label>Charisma:</label> </th>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_cha"></td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_chalink"></td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_chaxp"></td>
+                    </tr>
+                    <tr>
+                        <th class="sheet-item sheet-large"> <label>Edge:</label> </th>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_edg"></td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_edglink"> </td>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_edgxp"></td>
+                    </tr>
+                    <tr>
+                        <th class="sheet-item sheet-large"> <label>Spendable XP:</label> </th>
+                        <td class="sheet-number sheet-med"> <input type="number" name="attr_freexp"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--Combat Section-->
+        <div class="sheet-col">
+            <h3>Combat Data</h3>
+            <div class="sheet-table">
+                <div class="sheet-table-row">
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_CurrentDamage_$X_name}" type="number" name="attr_currentDamage" placeholder="0" data-i18n-placeholder="special-currentDamage-name" /><br><span data-i18n="Current Damage">Current Damage</span></span>
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_totalDamage_$X_name}" type="number" name="attr_totalDamage" placeholder="0" data-i18n-placeholder="special-totalDamage-name" /><br><span data-i18n="Total Damage">Total Damage</span></span>
+                </div>
+                <div class="sheet-table-row">
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_CurrentFatigueDamage_$X_name}" type="number" name="attr_currentFatigueDamage" placeholder="0" data-i18n-placeholder="special-totalFatigueDamage-name" /><br><span data-i18n="Current Fatigue Dmg">Current Fatigue Dmg</span></span>
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_totalFatigueDamage_$X_name}" type="number" name="attr_totalFatigueDamage" placeholder="0" data-i18n-placeholder="special-totalFatigueDamage-name" /><br><span data-i18n="Total Fatigue Dmg">Total Fatigue Dmg</span></span>
+                </div>
+                <div class="sheet-table-row">
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_charmove_$X_name}" type="number" name="attr_charmove" placeholder="0" data-i18n-placeholder="Movement" /><br><span data-i18n="Movement Speed">Movement Speed</span></span>
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_charrun_$X_name}" type="number" name="attr_charrun" placeholder="0" data-i18n-placeholder="Running" /><br><span data-i18n="Running Speed">Running Speed</span></span>
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_charsprint_$X_name}" type="number" name="attr_charsprint" placeholder="0" data-i18n-placeholder="Sprint" /><br><span data-i18n="Sprint Speed">Sprint Speed</span></span>
+                </div>
+                <div class="sheet-table">
+                    <h4>Personal Armor</h4>
+                    <fieldset class="repeating_personalarmor">
+                        <div class="sheet-table-row">
+                            <span class="sheet-table-cell"></span>
+                            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_personalarmorlocation_$X_name}" type="text" name="attr_personalarmorlocation" placeholder="Armor Location" data-i18n-placeholder="special-personalarmorlocation-name" /><br /><span data-i18n="Armor Location">Armor Location</span></span>
+                            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_personalcurrentarmor_$X_name}" type="number" name="attr_personalcurrentarmor" placeholder="0" data-i18n-placeholder="special-personalcurrentarmor-name" /><br><span data-i18n="Current Armor">Current Armor</span></span>
+                            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_personaltotalarmor_$X_name}" type="number" name="attr_personaltotalarmor" placeholder="0" data-i18n-placeholder="special-personaltotalarmor-name" /><br><span data-i18n="Total Armor">Total Armor</span></span>
+                        </div>
+                    </fieldset>
+                    <h4>Personal Weapons</h4>
+                    <fieldset class="repeating_personalweapons">
+                        <div class="sheet-table-row">
+                            <span class="sheet-table-cell"></span>
+                            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_personalweapon_$X_name}" type="text" name="attr_personalweaponname" placeholder="Weapon Name" data-i18n-placeholder="special-weapon-name" /><br /><span data-i18n="Weapon Name">Weapon Name</span></span>
+                            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_personalweaponskill_$X_name}" type="number" name="attr_personalweaponskill" placeholder="0" data-i18n-placeholder="special-weaponskill-name" /><br><span data-i18n="Weapon Skill">Weapon Skill</span></span>
+                            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_personalweaponapbd_$X_name}" type="text" name="attr_weaponapbd" placeholder="0" data-i18n-placeholder="special-weaponapandbd-name" /><br><span data-i18n="AP and BD">AP and BD</span></span>
+                            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_personalweaponrange_$X_name}" type="number" name="attr_personalweaponrange" placeholder="0" data-i18n-placeholder="special-weaponrange-name" /><br><span data-i18n="Weapon Range">Weapon Range</span></span>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Traits -->
+
+    <h3>Traits:</h3>
+
+
+    <div class="sheet-table sheet-sect">
+        <fieldset class="repeating_traits">
+            <div class="sheet-table-row">
+                <span class="sheet-table-cell"></span>
+                <span class="sheet-table-cell sheet-small-label sheet-sect"><input title="@{repeating_trait_$X_name}" type="text" name="attr_traitname" placeholder="Trait Name" data-i18n-placeholder="special-trait-name" /><br /><span data-i18n="Trait">Trait</span></span>
+                <span class="sheet-table-cell sheet-small-label sheet-sect"><input title="@{repeating_tp_$X_name}" type="number" name="attr_tp" placeholder="TP" data-i18n-placeholder="special-trait-name" /><br><span data-i18n="TP">TP</span></span>
+                <span class="sheet-table-cell sheet-small-label sheet-sect"><input title="@{repeating_pageref_$X_name}" type="number" name="attr_pageref" placeholder="Pg Ref" data-i18n-placeholder="special-pageref-name" /><br><span data-i18n="Page Ref">Page Ref</span></span>
+                <span class="sheet-table-cell sheet-small-label sheet-sect"><input title="@{repeating_traitxp_$X_name}" type="number" name="attr_traitxp" placeholder="XP" data-i18n-placeholder="special-traitxp-name" /><br><span data-i18n="XP">XP</span></span>
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- Skills -->
+    <h3>Skills:</h3>
+    <div class="sheet-table sheet-sect">
+        <!-- <div class="sheet-table-group-head">
+            <span class="sheet-table-header" style="padding-left: 60px; width: 20%;" data-i18n="Skill">Skill</span>
+            <span class="sheet-table-header" style="padding-left: 0px; width: 10%" data-i18n="Level">Level</span>
+            <span class="sheet-table-header" style="padding-left: 0px; width: 10%" data-i18n="Links">Links</span>
+            <span class="sheet-table-header" style="padding-left: 0px; width: 20%" data-i18n="TN">TN</span>
+            <span class="sheet-table-header" style="padding-left: 0px; width: 20%" data-i18n="C">C</></span>
+            <span class="sheet-table-header" style="padding-left: 0px; width: 20%" data-i18n="XP">XP</></span>
+
+        </div> -->
+        <fieldset class="repeating_skills">
+            <div class="sheet-table-group">
+                <div class="sheet-table-row">
+                    <span class="sheet-table-cell sheet-repeating-rollbutton"><button type="roll" name="Skill_check" title="@{skillname}" value="@{skillname} Roll=[[2d6 + [[ @{lvl} ]] + [[ @{links} ]] + ?{Modifier|0} ]] Unmodified Target number is @{TN}"></button></span>
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_skill_$X_name}" type="text" name="attr_skillname" placeholder="Skill Name" data-i18n-placeholder="special-skill-name" /><br /><span data-i18n="Skill">Skill</span></span>
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_lvl_$X_name}" type="number" name="attr_lvl" placeholder="Lvl" data-i18n-placeholder="special-lvl-name" /><br /><span data-i18n="Level">Level</span></span>
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_links_$X_name}" type="number" name="attr_links" placeholder="Links" data-i18n-placeholder="special-Links-name" /><br /><span data-i18n="Links">Links</span></span>
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_TN_$X_name}" type="number" name="attr_TN" placeholder="TN" data-i18n-placeholder="special-TN-name" /><br /><span data-i18n="TN">TN</span></span>
+                    <span class="sheet-table-cell">
+                        <select name="attr_C" class="sheet-select-small">
+                            <option data-i18n="SB">SB</option>
+                            <option data-i18n="SA">SA</option>
+                            <option data-i18n="CA">CA</option>
+                            <option data-i18n="CB">CB</option>
+                        </select>
+                    </span>
+
+                    <!-- <input title="@{repeating_C_$X_name}" type="text" name="attr_C" placeholder="C" data-i18n-placeholder="special-C-name" /><br /><span data-i18n="C">C</span></span> -->
+                    <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_skillxp_$X_name}" type="number" name="attr_skillxp" placeholder="XP" data-i18n-placeholder="special-skillxp-name" /><br /><span data-i18n="XP">XP</span></span>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <!--Inventory-->
+    <h3>Inventory:</h3>
+    <div class="sheet-table">
+        <fieldset class="repeating_inventory">
+            <div class="sheet-table-row">
+                <span class="sheet-table-cell"></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_item_$X_name}" type="text" name="attr_itemname" placeholder="Item" data-i18n-placeholder="special-item-name" /><br /><span data-i18n="Item">Item</span></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_location_$X_name}" type="text" name="attr_location" placeholder="Location" data-i18n-placeholder="special-location-name" /><br><span data-i18n="Location">Location</span></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_data_$X_name}" type="text" name="attr_data" placeholder="Data" data-i18n-placeholder="special-data-name" /><br><span data-i18n="Data">Data</span></span>
+            </div>
+        </fieldset>
+    </div>
+    <!--Life Modules -->
+    <div class="sheet-2colrow">
+        <div class="sheet-col">
+            <h3>Life Modules:</h3>
+        </div>
+    </div>
+    </div>
+
+
+    <table cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td colspan="3" class="sheet-statlabel-big" style="font-size: 1.2em; width: 180px;">Early Childhood</td>
+            </tr>
+            <tr>
+                <td><input class="sheet-inputbox" type="text" name="attr_earlychildhood" style="height: 24px; width: 250px;"></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="sheet-statlabel-big" style="font-size: 1.2em; width: 180px;">Late Childhood</td>
+            </tr>
+            <tr>
+                <td><input class="sheet-inputbox" type="text" name="attr_latechildhood" style="height: 24px; width: 250px;"></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="sheet-statlabel-big" style="font-size: 1.2em; width: 180px;">Life Module 3</td>
+            </tr>
+            <tr>
+                <td><input class="sheet-inputbox" type="text" name="attr_lifemodule3" style="height: 24px; width: 250px;"></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="sheet-statlabel-big" style="font-size: 1.2em; width: 180px;">Life Module 4</td>
+            </tr>
+            <tr>
+                <td><input class="sheet-inputbox" type="text" name="attr_lifemodule4" style="height: 24px; width: 250px;"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Mech Data -->
+    <div class="sheet-table">
+        <h3>Mech Data</h3>
+        <div class="sheet-table-row">
+            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_mechtype_$X_name}" type="text" name="attr_mechtypename" placeholder="Mech Type" data-i18n-placeholder="special-mechtype-name" /><br><span data-i18n="Mech Type">Mech Type</span></span>
+            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_tonnage_$X_name}" type="number" name="attr_tonnage" placeholder="Tons" data-i18n-placeholder="special-tonnage-name" /><br><span data-i18n="Tonnage">Tonnage</span></span>
+            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_walking_$X_name}" type="number" name="attr_walking" placeholder="Walking" data-i18n-placeholder="special-walking-name" /><br><span data-i18n="Walking">Walking</span></span>
+            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_running_$X_name}" type="number" name="attr_running" placeholder="Running" data-i18n-placeholder="special-running-name" /><br><span data-i18n="Running">Running</span></span>
+            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_jumping_$X_name}" type="number" name="attr_jumping" placeholder="Jumping" data-i18n-placeholder="special-jumping-name" /><br><span data-i18n="Jumping">Jumping</span></span>
+            <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_currentheat_$X_name}" type="number" name="attr_currentheat" placeholder="Heat" data-i18n-placeholder="special-currentheat-name" /><br><span data-i18n="Heat">Current Heat</span></span>
+        </div>
+    </div>
+    <!-- Mech Armor -->
+    <h3>Mech Armor:</h3>
+    <div class="sheet-table">
+        <fieldset class="repeating_mecharmor">
+            <div class="sheet-table-row">
+                <span class="sheet-table-cell"></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_armorlocation_$X_name}" type="text" name="attr_armorlocationname" placeholder="Location" data-i18n-placeholder="special-armorlocation-name" /><br /><span data-i18n="Armor Location">Armor Location</span></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_Current_$X_name}" type="number" name="attr_current" placeholder="0" data-i18n-placeholder="special-current-name" /><br><span data-i18n="Current Armor">Current Armor</span></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_total_$X_name}" type="number" name="attr_total" placeholder="0" data-i18n-placeholder="special-total-name" /><br><span data-i18n="Total Armor">Total Armor</span></span>
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- Weapons Inventory-->
+    <h3>Weapons Inventory:</h3>
+    <div class="sheet-table">
+        <fieldset class="repeating_mechweapons">
+            <div class="sheet-table-row">
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_weapontype_$X_name}" type="text" name="attr_weapontype" placeholder="Type" data-i18n-placeholder="special-weapontype-name" /><br><span data-i18n="Weapon Type">Weapon Type</span></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_text_$X_name}" type="text" name="attr_weaponlocation" placeholder="Location" data-i18n-placeholder="special-weaponlocation-name" /><br><span data-i18n="Weapon Location">Weapon Location</span></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_weapondamage_$X_name}" type="number" name="attr_weapondamage" placeholder="DMG" data-i18n-placeholder="special-weapondamage-name" /><br><span data-i18n="Damage">Damage</span></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_Heat_$X_name}" type="number" name="attr_Heat" placeholder="0" data-i18n-placeholder="special-Heat-name" /><br><span data-i18n="Heat">Heat</span></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_min_$X_name}" type="number" name="attr_min" placeholder="0" data-i18n-placeholder="special-min-name" /><br><span data-i18n="Minimum Range">Minimum Range</span></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_short_$X_name}" type="number" name="attr_short" placeholder="0" data-i18n-placeholder="special-short-name" /><br><span data-i18n="Short">Short</span></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_medium_$X_name}" type="number" name="attr_medium" placeholder="0" data-i18n-placeholder="special-medium-name" /><br><span data-i18n="Medium">Medium</span></span>
+                <span class="sheet-table-cell sheet-small-label"><input title="@{repeating_long_$X_name}" type="number" name="attr_long" placeholder="0" data-i18n-placeholder="special-long-name" /><br><span data-i18n="Long">Long</span></span>
+            </div>
+        </fieldset>
+    </div>
+    <!--Heat Sinks-->
+    <div class="sheet-table">
+
+        <h3>Heat Sinks</h3>
+        <div class="sheet-item sheet-tiny"></div>
+        <div class="sheet-item sheet-large">
+            <label>Total Heat Sinks:</label>
+        </div>
+        <div class="sheet-item sheet-med">
+            <input type="number" name="attr_heatsinks">
+        </div>
+        <div class="sheet-table-row">
+            <h4>Single Double</h4>
+        </div>
+        <div class="sheet-table-row">
+            <input type="radio" value="1" name="attr_heatsinkMultiplier">
+            <input type="radio" value="2" name="attr_heatsinkMultiplier" checked="true">
+        </div>
+    </div>
+
+    <!-- Critical Hit Table -->
+    <div class="sheet-2colrow">
+        <div class="sheet-col">
+            <h3>Left Arm</h3>
+            <h4>1-3</h4>
+            <ol>
+                <li>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm1-3_1">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm1-3_2">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm1-3_3">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm1-3_4">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm1-3_5">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm1-3_6">
+                    </div>
+                </li>
+            </ol>
+            <h4>4-6</h4>
+            <ol>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm4-6_1">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm4-6_2">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm4-6_3">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm4-6_4">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm4-6_5">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftarm4-6_6">
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="sheet-col">
+            <h3>Right Arm</h3>
+            <h3> </h3>
+            <h4>1-3</h4>
+            <ol>
+                <li>
+                    div class="sheet-item sheet-med">
+                    <input type="text" style="width: 200px;" name="attr_critleftarm1-3_1">
+        </div></li>
+        <li>
+            <div class="sheet-item sheet-med">
+            <input type="text" style="width: 200px;" name="attr_critrightarm1-3_2">
+    </div></li>
+                <li><div class="sheet-item sheet-med">
+<input type="text" style="width: 200px;" name="attr_critrightarm1-3_3">
+</div</li>
+                <li><div class="sheet-item sheet-med">
+<input type="text" style="width: 200px;" name="attr_critrightarm1-3_4">
+</div</li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrightarm1-3_5">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrightarm1-3_6">
+                    </div>
+                </li>
+            </ol>
+            <h4>4-6</h4>
+            <ol>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrightarm4-6_1">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrightarm4-6_2">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrightarm4-6_3">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrightarm4-6_4">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrightarm4-6_5">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrightarm4-6_6">
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="sheet-2colrow">
+        <div class="sheet-col">
+            <h3>Left Torso</h3>
+            <h3> </h3>
+            <h4>1-3</h4>
+            <ol>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso1-3_1">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso1-3_2">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso1-3_3">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso1-3_4">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso1-3_5">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso1-3_6">
+                    </div>
+                </li>
+            </ol>
+            <h4>4-6</h4>
+            <ol>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso4-6_1">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso4-6_2">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso4-6_3">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso4-6_4">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso4-6_5">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critlefttorso4-6_6">
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="sheet-col">
+            <h3>Right Torso</h3>
+            <h3> </h3>
+            <h4>1-3</h4>
+            <ol>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso1-3_1">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso1-3_2">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso1-3_3">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso1-3_4">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso1-3_5">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso1-3_6">
+                    </div>
+                </li>
+            </ol>
+            <h4>4-6</h4>
+            <ol>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso4-6_1">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso4-6_2">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso4-6_3">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso4-6_4">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso4-6_5">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrighttorso4-6_6">
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="sheet-2colrow">
+        <div class="sheet-col">
+            <h3>Left Leg</h3>
+            <ol>
+                <li>Hip</li>
+                <li>Upper Leg Actuator</li>
+                <li>Lower Leg Actuator</li>
+                <li>Foot Actuator</li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftleg_5">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critleftleg_6">
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="sheet-col">
+            <h3>Right Leg</h3>
+            <ol>
+                <li>Hip</li>
+                <li>Upper Leg Actuator</li>
+                <li>Lower Leg Actuator</li>
+                <li>Foot Actuator</li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrightleg_5">
+                    </div>
+                </li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_critrightleg_6">
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="sheet-2colrow">
+        <div class="sheet-col">
+            <h3>Head</h3>
+            <ol>
+                <li>Life Support</li>
+                <li>Sensors</li>
+                <li>Cockpit</li>
+                <li>
+                    <div class="sheet-item sheet-tiny"></div>
+                    <div class="sheet-item sheet-med">
+                        <input type="text" style="width: 200px;" name="attr_crithead_4">
+                    </div>
+                </li>
+                <li>Sensors</li>
+                <li>Life Support </li>
+            </ol>
+            </div>
+        <div class="sheet-col">
+            <h3>Central Torso</h3>
+            <h3> </h3>
+            <h4>1-3</h4>
+            <ol>
+                <li>Engine</li>
+                <li>Engine</li>
+                <li>Engine</li>
+                <li>Gyro</li>
+                <li>Gyro</li>
+                <li>Gyro</li>
+            </ol>
+            <h4>4-6</h4>
+            <li>Gyro</li>
+            <li>Engine</li>
+            <li>Engine</li>
+            <li>Engine</li>
+            <li>
+                <div class="sheet-item sheet-tiny"></div>
+                <div class="sheet-item sheet-med">
+                    <input type="text" style="width: 200px;" name="attr_critcentertorso_5">
+                </div>
+            </li>
+            <li>
+                <div class="sheet-item sheet-tiny"></div>
+                <div class="sheet-item sheet-med">
+                    <input type="text" style="width: 200px;" name="attr_critcentertorso_6">
+                </div>
+            </li>
+            </div>
+        </div>
+            <h3>Critical Hits</h3>
+            <div class="sheet-header">
+                <div class="sheet-item sheet-tiny"></div>
+                <div class="sheet-item sheet-large">
+                    <label>Engine Hits:</label>
+                </div>
+                <input type="checkbox" name="attr_enginecrit_1" value="1">
+                <input type="checkbox" name="attr_enginecrit_2" value="2">
+                <input type="checkbox" name="attr_enginecrit_3" value="3">
+                <div class="sheet-item sheet-large">
+                    <label>Gyro Hits:</label>
+                </div>
+                <input type="checkbox" name="attr_gyrocrit_1" value="1">
+                <input type="checkbox" name="attr_gyrocrit_2" value="2">
+                <div class="sheet-item sheet-large">
+                    <label>Sensor Hits:</label>
+                </div>
+                <input type="checkbox" name="attr_sensorcrit_1" value="1">
+                <input type="checkbox" name="attr_sensorcrit_2" value="2">
+                <div class="sheet-item sheet-large">
+                    <label>Life Support Hits:</label>
+                </div>
+                <input type="checkbox" name="attr_lifesupportcrit_1" value="1">
+            </div>
+    <h3>Aerospace Critical Hit Locations</h3>
+    <div class="sheet-header">
+        <div class="sheet-item sheet-tiny"></div>
+        <div class="sheet-item sheet-large">
+            <label>Avionics Hits:</label>
+        </div>
+        <input type="checkbox" name="attr_avionicscrit_1" value="1">
+        <input type="checkbox" name="attr_avionicscrit_2" value="2">
+        <input type="checkbox" name="attr_avionicscrit_3" value="3">
+        <div class="sheet-item sheet-large">
+            <label>Sensors Hits:</label>
+        </div>
+        <input type="checkbox" name="attr_sensorscrit_1" value="1">
+        <input type="checkbox" name="attr_sensorscrit_2" value="2">
+        <input type="checkbox" name="attr_sensorscrit_3" value="3">
+        <div class="sheet-item sheet-large">
+            <label>FCS Hits:</label>
+        </div>
+        <input type="checkbox" name="attr_fcscrit_1" value="1">
+        <input type="checkbox" name="attr_fcscrit_2" value="2">
+        <input type="checkbox" name="attr_fcscrit_3" value="3">
+        <div class="sheet-item sheet-large">
+            <label>Life Support Hits:</label>
+        </div>
+        <input type="checkbox" name="attr_lifesupportcrit_1" value="1">
+    </div>
+    <label>Aero Engine Hits:</label>
+    </div>
+    <input type="checkbox" name="attr_aeroenginecrit_1" value="1">
+    <input type="checkbox" name="attr_aeroenginecrit_2" value="2">
+    <input type="checkbox" name="attr_aeroenginecrit_3" value="3">
+    <div class="sheet-item sheet-large">
+        <label>Landing gear Hits:</label>
+    </div>
+    <input type="checkbox" name="attr_landinggearcrit_1" value="1">
+    </div>
+    <label>Thruster Left Hits:</label>
+    </div>
+    <input type="checkbox" name="attr_thrusterleftcrit_1" value="1">
+    <input type="checkbox" name="attr_thrusterleftcrit_2" value="2">
+    <input type="checkbox" name="attr_thrusterleftcrit_3" value="3">
+    <div class="sheet-item sheet-large">
+        <label>Thruster Right Hits:</label>
+    </div>
+    <input type="checkbox" name="attr_thrusterrightcrit_1" value="1">
+    <input type="checkbox" name="attr_thrusterrightcrit_2" value="2">
+    <input type="checkbox" name="attr_thrusterrightcrit_3" value="3">
+    <div class="sheet-item sheet-large">
+        </bg>
+        </bg>
+
+</body></html>
